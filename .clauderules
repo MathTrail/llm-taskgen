@@ -3,13 +3,13 @@ You are working on mathtrail-llm-taskgen — the LLM connector that generates pe
 This service accepts generation parameters and returns structured task objects.
 It is STATELESS — no database, no persistent state.
 
-Tech Stack: Go or Python (prefer Go for consistency), LLM SDKs (OpenAI, Anthropic), Dapr service invocation
+Tech Stack: Go or Python (prefer Go for consistency), LLM SDKs (OpenAI, Anthropic), HTTP service invocation
 Port: 8080
 Infra: infra/helm/mathtrail-llm-taskgen/
 
 # Communication Map
-Dapr App ID: mathtrail-llm-taskgen
-Inbound: Dapr service invocation from mathtrail-task (sync call)
+App ID: mathtrail-llm-taskgen
+Inbound: HTTP service invocation from mathtrail-task (sync call)
 Outbound: External API calls to OpenAI / Anthropic / Ollama
 Secrets (Vault): secret/data/{env}/mathtrail-llm-taskgen/llm-api-key
 

@@ -11,10 +11,10 @@ LLM connector that generates personalized math olympiad problems using language 
 ## Tech Stack
 - **Language**: Go or Python (TBD based on LLM SDK availability)
 - **LLM**: OpenAI API / Anthropic API / local Ollama
-- **Events**: Dapr service invocation (sync)
+- **Events**: HTTP service invocation (sync)
 
-## API & Communication (Dapr)
-- **Inbound**: Dapr service invocation from mathtrail-task
+## API & Communication
+- **Inbound**: HTTP service invocation from mathtrail-task
 - **Outbound**: External LLM API calls (OpenAI, Anthropic)
 
 ## Data Persistence
